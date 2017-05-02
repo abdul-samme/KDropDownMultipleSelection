@@ -35,7 +35,7 @@
     CGRect rect = CGRectMake(point.x, point.y, size.width, height);
     if (self = [super initWithFrame:rect])
     {
-        self.backgroundColor = [UIColor clearColor];
+        self.backgroundColor = [UIColor colorWithRed:103.0/255.0 green:145.0/255.0 blue:70.0/255.0 alpha:0.8];
         self.layer.shadowColor = [UIColor blackColor].CGColor;
         self.layer.shadowOffset = CGSizeMake(2.5, 2.5);
         self.layer.shadowRadius = 2.0f;
@@ -133,7 +133,7 @@
     UIImageView *imgarrow=[[UIImageView alloc]init ];
     
     if([self.arryData containsObject:indexPath]){
-        imgarrow.frame=CGRectMake(230,2, 27, 27);
+        imgarrow.frame=CGRectMake([UIScreen mainScreen].bounds.size.width-55,2, 27, 27);
         imgarrow.image=[UIImage imageNamed:@"check_mark@2x.png"];
 	} else
         imgarrow.image=nil;
