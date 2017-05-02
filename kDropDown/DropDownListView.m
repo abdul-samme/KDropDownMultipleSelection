@@ -55,10 +55,10 @@
         _kTableView.delegate = self;
         [self addSubview:_kTableView];
         
-        if (isMultipleSelection) {
+         if (isMultipleSelection) {
             UIButton *btnDone=[UIButton  buttonWithType:UIButtonTypeCustom];
-            [btnDone setFrame:CGRectMake(rect.origin.x+182,rect.origin.y-45, 82, 31)];
-            [btnDone setImage:[UIImage imageNamed:@"done@2x.png"] forState:UIControlStateNormal];
+            [btnDone setFrame:CGRectMake(rect.size.width-90,10, 82, 31)];
+            [btnDone setTitle:@"Done" forState:UIControlStateNormal];
             [btnDone addTarget:self action:@selector(Click_Done) forControlEvents: UIControlEventTouchUpInside];
             [self addSubview:btnDone];
         }
